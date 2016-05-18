@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'touroku/style.css' %}" />
+<html>
+<head>
+	<title>登録フォーム</title>
+</head>
+<body>
+<h1>関数 - 登録フォーム</h1>
+<!-- <form action="/touroku/" method="post">{% csrf_token %} -->
+<form action="{% url 'touroku:lists' %}" method="post">{% csrf_token %}
+	<table>
+		{{form1.as_table}}
+		<tr><td colspan='2'><input type="submit" value="Submit"></td></tr>
+		<!-- <a href="{% url 'touroku:lists' %}">to list</a> -->
+	</table> 
+</form> 
+</body> 
+</html>
